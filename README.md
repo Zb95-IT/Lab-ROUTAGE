@@ -16,13 +16,13 @@ Chaque routeur joue un rôle distinct selon sa position dans la chaîne.
 
 
 ### Tables de routage
-R1 — Route par défaut
+R1 Route par défaut
 Afficher l'image
 R1 est en bout de chaîne. Une route par défaut S* 0.0.0.0/0 via 192.168.2.2 envoie tout le trafic inconnu vers R2.
 
 ---
 
-### R2 — `show ip route`
+### R2 `show ip route`
 
 
 
@@ -33,7 +33,7 @@ Il dispose de deux **routes statiques spécifiques** :
 
 ---
 
-### R3 — `show ip route`
+### R3 `show ip route`
 
 
 
