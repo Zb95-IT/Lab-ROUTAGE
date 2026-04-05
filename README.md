@@ -27,24 +27,7 @@ Chaque routeur joue un rôle distinct selon sa position dans la chaîne.
 
 ---
 
-## Logique du routage statique
 
-| Routeur | Type de route       | Justification                                                                 |
-|---------|---------------------|-------------------------------------------------------------------------------|
-| R1      | Route par défaut    | Routeur en bout de chaîne — tout ce qui n'est pas le Réseau A va vers R2.     |
-| R2      | Routes spécifiques  | Routeur central — doit savoir précisément où envoyer le trafic dans chaque direction. |
-| R3      | Route par défaut    | Routeur en bout de chaîne — tout ce qui n'est pas le Réseau D va vers R2.     |
-
----
-
-## Tables de routage
-
-### R1 — `show ip route`
-
-![R1 show ip route](screenshots/r1_show_ip_route.png)
-
-R1 est connecté directement aux réseaux A (`192.168.1.0/24`) et B (`192.168.2.0/24`).  
-Une **route par défaut** (`S* 0.0.0.0/0`) pointe vers R2 (`192.168.2.2`), ce qui lui permet d'atteindre tous les réseaux au-delà sans avoir à les connaître individuellement.
 
 ---
 
