@@ -12,20 +12,8 @@ Chaque routeur joue un rôle distinct selon sa position dans la chaîne.
 
 ---
 
-## Plan d'adressage
 
-| Équipement | Interface          | Adresse IP     | Masque          | Passerelle    |
-|------------|--------------------|----------------|-----------------|---------------|
-| PC0        | NIC                | 192.168.1.10   | 255.255.255.0   | 192.168.1.1   |
-| R1         | GigabitEthernet0/0 | 192.168.1.1    | 255.255.255.0   | —             |
-| R1         | GigabitEthernet0/1 | 192.168.2.1    | 255.255.255.0   | —             |
-| R2         | GigabitEthernet0/0 | 192.168.2.2    | 255.255.255.0   | —             |
-| R2         | GigabitEthernet0/1 | 192.168.3.1    | 255.255.255.0   | —             |
-| R3         | GigabitEthernet0/0 | 192.168.3.2    | 255.255.255.0   | —             |
-| R3         | GigabitEthernet0/1 | 192.168.4.1    | 255.255.255.0   | —             |
-| Server0    | NIC                | 192.168.4.10   | 255.255.255.0   | 192.168.4.1   |
 
----
 
 ### Tables de routage
 R1 — Route par défaut
