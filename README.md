@@ -6,7 +6,8 @@
 
 ## Topologie du réseau
 
-![Topologie complète](screenshots/topologie.png)
+![Topologie complète](<img width="1327" height="492" alt="image" src="https://github.com/user-attachments/assets/d7fdf72b-c413-480a-a5fe-cebbc89b7aec" />
+)
 
 Le réseau est composé de **4 sous-réseaux**, **3 routeurs**, **1 PC** et **1 serveur** interconnectés en ligne.  
 Chaque routeur joue un rôle distinct selon sa position dans la chaîne.
