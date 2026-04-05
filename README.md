@@ -18,6 +18,8 @@ Chaque routeur joue un rôle distinct selon sa position dans la chaîne.
 ### Tables de routage
 
 ![preview (4)](https://github.com/user-attachments/assets/fc8769e1-e86b-4587-9705-4039ece88f8f)
+
+
 R1 Route par défaut
 R1 est en bout de chaîne. Une route par défaut S* 0.0.0.0/0 via 192.168.2.2 envoie tout le trafic inconnu vers R2.
 
