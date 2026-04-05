@@ -1,9 +1,6 @@
-# Challenge Packet Tracer — Routage Statique
+# Challenge Packet Tracer  Routage Statique
 
-> **Formation :** TSSR — Wild Code School  
-> **Auteur :** Zinedine Balamane  
-> **GitHub :** [Zb95-IT](https://github.com/Zb95-IT)  
-> **Objectif :** Configurer l'adressage IPv4 statique d'un réseau multi-routeurs et choisir le type de routage statique adapté à chaque situation.
+
 
 ---
 
@@ -92,51 +89,4 @@ Le chemin retour R3 → R2 → R1 fonctionne correctement, confirmant que le rou
 
 ---
 
-## Commandes clés utilisées
 
-```bash
-# Entrer en mode de configuration
-enable
-configure terminal
-
-# Nommer le routeur
-hostname R1
-
-# Configurer une interface
-interface GigabitEthernet0/0
-ip address 192.168.1.1 255.255.255.0
-no shutdown                            # Activer l'interface (éteinte par défaut sur Cisco)
-exit
-
-# Route par défaut (R1 et R3)
-ip route 0.0.0.0 0.0.0.0 192.168.2.2
-
-# Route spécifique (R2)
-ip route 192.168.1.0 255.255.255.0 192.168.2.1
-ip route 192.168.4.0 255.255.255.0 192.168.3.2
-
-# Sauvegarder la configuration
-write memory
-
-# Vérifier la table de routage
-show ip route
-
-# Vérifier l'état des interfaces
-show ip interface brief
-```
-
----
-
-## Structure du dépôt
-
-```
-challenge-routage-statique/
-├── README.md
-└── screenshots/
-    ├── topologie.png
-    ├── r1_show_ip_route.png
-    ├── r2_show_ip_route.png
-    ├── r3_show_ip_route.png
-    ├── ping_pc0_vers_r3.png
-    └── ping_server0_vers_r1.png
-```
