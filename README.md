@@ -16,14 +16,16 @@ Chaque routeur joue un rôle distinct selon sa position dans la chaîne.
 
 
 ### Tables de routage
-R1 Route par défaut
-Afficher l'image
+R1 Route par déf
+![preview (4)](https://github.com/user-attachments/assets/fc8769e1-e86b-4587-9705-4039ece88f8f)
+
 R1 est en bout de chaîne. Une route par défaut S* 0.0.0.0/0 via 192.168.2.2 envoie tout le trafic inconnu vers R2.
 
 ---
 
 ### R2 `show ip route`
 
+![preview (3)](https://github.com/user-attachments/assets/55fbf81b-ad06-4a7d-8063-19aea7b82bfa)
 
 
 R2 est le routeur central, connecté aux réseaux B et C.  
@@ -35,6 +37,7 @@ Il dispose de deux **routes statiques spécifiques** :
 
 ### R3 `show ip route`
 
+![preview (2)](https://github.com/user-attachments/assets/8d457297-06cc-49d6-ae42-2b8174ba361f)
 
 
 R3 est connecté directement aux réseaux C (`192.168.3.0/24`) et D (`192.168.4.0/24`).  
@@ -45,6 +48,7 @@ Une **route par défaut** (`S* 0.0.0.0/0`) pointe vers R2 (`192.168.3.1`), lui p
 ## Tests de connectivité
 
 ### Ping depuis PC0 vers R3 (192.168.4.1)
+![preview (1)](https://github.com/user-attachments/assets/802fac9f-85f7-437f-a01a-116b0371a880)
 
 
 
@@ -54,6 +58,7 @@ Le paquet traverse R1 → R2 → R3, validant la cohérence du routage de bout e
 ---
 
 ### Ping depuis Server0 vers R1 (192.168.1.1)
+![preview](https://github.com/user-attachments/assets/836b8eb3-c60f-47db-8db6-b712d5c417a2)
 
 
 
