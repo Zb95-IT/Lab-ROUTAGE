@@ -27,13 +27,16 @@ Chaque routeur joue un rôle distinct selon sa position dans la chaîne.
 
 ---
 
-
+### Tables de routage
+R1 — Route par défaut
+Afficher l'image
+R1 est en bout de chaîne. Une route par défaut S* 0.0.0.0/0 via 192.168.2.2 envoie tout le trafic inconnu vers R2.
 
 ---
 
 ### R2 — `show ip route`
 
-![R2 show ip route](screenshots/r2_show_ip_route.png)
+
 
 R2 est le routeur central, connecté aux réseaux B et C.  
 Il dispose de deux **routes statiques spécifiques** :
@@ -44,7 +47,7 @@ Il dispose de deux **routes statiques spécifiques** :
 
 ### R3 — `show ip route`
 
-![R3 show ip route](screenshots/r3_show_ip_route.png)
+
 
 R3 est connecté directement aux réseaux C (`192.168.3.0/24`) et D (`192.168.4.0/24`).  
 Une **route par défaut** (`S* 0.0.0.0/0`) pointe vers R2 (`192.168.3.1`), lui permettant d'atteindre tous les réseaux en amont via R2.
@@ -55,7 +58,7 @@ Une **route par défaut** (`S* 0.0.0.0/0`) pointe vers R2 (`192.168.3.1`), lui p
 
 ### Ping depuis PC0 vers R3 (192.168.4.1)
 
-![Ping PC0 vers 192.168.4.1](screenshots/ping_pc0_vers_r3.png)
+
 
 Le ping depuis PC0 (`192.168.1.10`) vers l'interface de R3 (`192.168.4.1`) est **100% réussi** (0% perte).  
 Le paquet traverse R1 → R2 → R3, validant la cohérence du routage de bout en bout.
@@ -64,7 +67,7 @@ Le paquet traverse R1 → R2 → R3, validant la cohérence du routage de bout e
 
 ### Ping depuis Server0 vers R1 (192.168.1.1)
 
-![Ping Server0 vers 192.168.1.1](screenshots/ping_server0_vers_r1.png)
+
 
 Le ping depuis Server0 (`192.168.4.10`) vers l'interface de R1 (`192.168.1.1`) est **100% réussi** (0% perte).  
 Le chemin retour R3 → R2 → R1 fonctionne correctement, confirmant que le routage est bidirectionnel.
